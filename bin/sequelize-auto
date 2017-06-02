@@ -71,7 +71,7 @@ configFile.tables = configFile.tables || (argv.t && argv.t.split(',')) || null;
 configFile.skipTables = configFile.skipTables || (argv.T && argv.T.split(',')) || null;
 configFile.camelCase = !!argv.C;
 configFile.schema = argv.s || configFile.schema;
-
+configFile.prefix = argv.P || configFile.prefix;
 function getDefaultPort(dialect) {
     switch (dialect.toLowerCase()) {
         case 'mssql':
